@@ -1,0 +1,70 @@
+.preview-psd {
+    background-color: #193856;
+    background-image: url(../img/file-icons/psd.png);
+}
+
+.preview-zip {
+    background-color: #e97f04;
+    background-image: url(../img/file-icons/package.png);
+}
+
+.preview-rar {
+    background-color: #8E44AD;
+    background-image: url(../img/file-icons/package.png);
+}
+
+.preview-html {
+    background-color: #d13b00;
+    background-image: url(../img/file-icons/html.png);
+}
+
+.preview-css {
+    background-color: #236e26;
+    background-image: url(../img/file-icons/css.png);
+}
+
+.preview-js {
+    background-color: #6c1630;
+    background-image: url(../img/file-icons/js.png);
+}
+
+.preview-exe {
+    background-color: #323745;
+    background-image: url(../img/file-icons/windows.png);
+}
+
+.preview-msi {
+    background-color: #0d8128;
+    background-image: url(../img/file-icons/windows.png);
+}
+
+.preview-pdf {
+    background-color: #901d15;
+    background-image: url(../img/file-icons/pdf.png);
+}
+
+.preview-txt {
+    background-color: #34495E;
+    background-image: url(../img/file-icons/document.png);
+}
+
+.preview-doc,
+.preview-docx {
+    background-color: #285294;
+    background-image: url(../img/file-icons/document.png);
+}
+
+.preview-avi,
+.preview-mp4 {
+    background-color: #9f2020;
+    background-image: url(../img/file-icons/video.png);
+}
+
+.preview-jpg,
+.preview-jpeg,
+.preview-gif,
+.preview-png,
+.preview-bmp {
+    background-color: #9f2020;
+    background-image: url(../img/file-icons/image.png);
+}
