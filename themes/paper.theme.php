@@ -25,29 +25,17 @@
  */
 
 /**
- * View class
+ * Default theme
  *
  * @author lgk
  */
-class View extends Main {
-    public $theme_name;
-    public $theme_path;
-    public $template;
+class Theme {
+    public $head;
+    public $body;
+    public $foot;
     
-    public function __construct($opt_theme, $opt_template) {
-        parent::__construct();
-        
-        $this->theme_name = $opt_theme;
-        $this->generate_app_theme_path();
-        
-        $this->template = $opt_template;
-    }
-    
-    private function generate_app_theme_path() {
-        $this->theme_path = './themes/' . $this->theme_name . '.theme.php';
-    }
-    
-    public function load_theme() {
-        include $this->theme_path;
+    public function __construct() {
+        $this->head = '';
+        $this->head .= '<link rel="stylesheet" href="./themes/paper/bootstrap.min.css">';
     }
 }

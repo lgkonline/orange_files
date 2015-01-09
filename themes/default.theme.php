@@ -36,9 +36,6 @@ class Theme {
     
     public function __construct() {
         $this->head = '';
-        $this->head .= '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">';
         $this->head .= '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">';
-        
-        $this->foot = '<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> ';
     }
 }

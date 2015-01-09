@@ -33,6 +33,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <title><?php echo $main->app_title; ?></title>
+        <link rel="stylesheet" href="./css/orange_files.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <?php echo $theme->head; ?>
     </head>
 
@@ -54,9 +57,10 @@
         
         <?php 
             // Hier kommt die Einbindung des Layouts/Templates
-            include './templates/default.templ.php'; 
+            include './templates/' . $view->template . '.templ.php'; 
         ?>
         
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <?php echo $theme->foot; ?>
     </body>
 </html>

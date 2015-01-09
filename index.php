@@ -25,6 +25,9 @@ $main = new Main();
  * From here you can start customizing your orange_files installation.
  */
 
+/* Title */
+$main->app_title = 'My files';
+
 /* Files path */
 $main->files_path = './files/';
 
@@ -33,6 +36,11 @@ $main->files_path = './files/';
 $main->authentication = 'none';
 $main->authentication_password = '123456'; // Only works when $main->authentication = 'password'
 
+/* Template */
+$opt_template = 'default';
+
+/* Theme */
+$opt_theme = 'paper';
 
 
 /*
@@ -59,9 +67,8 @@ $main->authentication_password = '123456'; // Only works when $main->authenticat
  * THE SOFTWARE.
  */
 
-$view = new View();
+$view = new View($opt_theme, $opt_template);
 $view->load_theme();
 $theme = new Theme();
 include './views/files.php';
 
-?>
