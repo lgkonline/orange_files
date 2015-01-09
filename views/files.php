@@ -1,41 +1,6 @@
 <?php
 
-// Über ?debug=true wird der Debug-Modus aktiviert
-// Dies sollte in der finalen Version auskommentiert/entfernt werden
-if (filter_input(INPUT_GET, 'debug')) {
-    $debug = true;
-}
-else {
-    $debug = false;
-}
-
-// Klassen werden eingebunden
-require_once './classes/Main.class.php';
-require_once './classes/View.class.php';
-require_once './classes/Files.class.php';
-//
-
-$main = new Main();
-
-/* ----------------------*/
-
-////* WELCOME! *////
-
-/*
- * From here you can start customizing your orange_files installation.
- */
-
-/* Files path */
-$main->files_path = './files/';
-
-
-/* Authentication ('none'|'password') */
-$main->authentication = 'none';
-$main->authentication_password = '123456'; // Only works when $main->authentication = 'password'
-
-
-
-/*
+/* 
  * The MIT License
  *
  * Copyright 2015 lgk.
@@ -59,9 +24,39 @@ $main->authentication_password = '123456'; // Only works when $main->authenticat
  * THE SOFTWARE.
  */
 
-$view = new View();
-$view->load_theme();
-$theme = new Theme();
-include './views/files.php';
-
 ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title><?php echo $main->app_title; ?></title>
+        <?php echo $theme->head; ?>
+    </head>
+
+    <body>
+        <?php echo $theme->body; ?>
+        
+        <div class="container">
+            <a 
+                href="<?php if ($debug) : ?>./?<?php else : ?>./?debug=true<?php endif; ?>" 
+                class="btn btn-default <?php if ($debug) : ?>active<?php endif; ?> pull-right"
+            >
+                Debug
+            </a>
+            
+            <div class="page-header">
+                <h1><?php echo $main->app_title; ?></h1>
+            </div>
+        </div>
+        
+        <?php 
+            // Hier kommt die Einbindung des Layouts/Templates
+            include './templates/default.templ.php'; 
+        ?>
+        
+        <?php echo $theme->foot; ?>
+    </body>
+</html>

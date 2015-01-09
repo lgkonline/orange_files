@@ -1,40 +1,5 @@
 <?php
 
-// Über ?debug=true wird der Debug-Modus aktiviert
-// Dies sollte in der finalen Version auskommentiert/entfernt werden
-if (filter_input(INPUT_GET, 'debug')) {
-    $debug = true;
-}
-else {
-    $debug = false;
-}
-
-// Klassen werden eingebunden
-require_once './classes/Main.class.php';
-require_once './classes/View.class.php';
-require_once './classes/Files.class.php';
-//
-
-$main = new Main();
-
-/* ----------------------*/
-
-////* WELCOME! *////
-
-/*
- * From here you can start customizing your orange_files installation.
- */
-
-/* Files path */
-$main->files_path = './files/';
-
-
-/* Authentication ('none'|'password') */
-$main->authentication = 'none';
-$main->authentication_password = '123456'; // Only works when $main->authentication = 'password'
-
-
-
 /*
  * The MIT License
  *
@@ -59,9 +24,21 @@ $main->authentication_password = '123456'; // Only works when $main->authenticat
  * THE SOFTWARE.
  */
 
-$view = new View();
-$view->load_theme();
-$theme = new Theme();
-include './views/files.php';
-
-?>
+/**
+ * Default theme
+ *
+ * @author lgk
+ */
+class Theme {
+    public $head;
+    public $body;
+    public $foot;
+    
+    public function __construct() {
+        $this->head = '';
+        $this->head .= '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">';
+        $this->head .= '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">';
+        
+        $this->foot = '<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> ';
+    }
+}

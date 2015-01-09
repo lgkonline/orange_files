@@ -1,40 +1,5 @@
 <?php
 
-// Über ?debug=true wird der Debug-Modus aktiviert
-// Dies sollte in der finalen Version auskommentiert/entfernt werden
-if (filter_input(INPUT_GET, 'debug')) {
-    $debug = true;
-}
-else {
-    $debug = false;
-}
-
-// Klassen werden eingebunden
-require_once './classes/Main.class.php';
-require_once './classes/View.class.php';
-require_once './classes/Files.class.php';
-//
-
-$main = new Main();
-
-/* ----------------------*/
-
-////* WELCOME! *////
-
-/*
- * From here you can start customizing your orange_files installation.
- */
-
-/* Files path */
-$main->files_path = './files/';
-
-
-/* Authentication ('none'|'password') */
-$main->authentication = 'none';
-$main->authentication_password = '123456'; // Only works when $main->authentication = 'password'
-
-
-
 /*
  * The MIT License
  *
@@ -59,9 +24,25 @@ $main->authentication_password = '123456'; // Only works when $main->authenticat
  * THE SOFTWARE.
  */
 
-$view = new View();
-$view->load_theme();
-$theme = new Theme();
-include './views/files.php';
-
-?>
+/**
+ * View class
+ *
+ * @author lgk
+ */
+class View extends Main {
+    public $theme_name;
+    public $theme_path;
+    
+    public function __construct() {
+        $this->theme_name = 'default';
+        $this->generate_app_theme_path();
+    }
+    
+    private function generate_app_theme_path() {
+        $this->theme_path = './themes/' . $this->theme_name . '.theme.php';
+    }
+    
+    public function load_theme() {
+        include $this->theme_path;
+    }
+}
