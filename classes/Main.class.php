@@ -38,8 +38,8 @@ class Main {
     public $authentication_password;
     
     public function __construct() {
-        $this->app_full_url = $this->server_info('REQUEST_SCHEME') . '://' . $this->server_info('HTTP_HOST') . dirname($this->server_info('PHP_SELF')) . '/';
-        $this->app_full_path = dirname($this->server_info('SCRIPT_FILENAME')) . '/';
+        $this->app_full_url = './';
+        $this->app_full_path = './';
         $this->app_title = 'My files';
         $this->files_path = './files/';
         

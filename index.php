@@ -70,5 +70,5 @@ $opt_theme = 'paper';
 $view = new View($opt_theme, $opt_template);
 $view->load_theme();
 $theme = new Theme();
-include './views/files.php';
+include './views/files.view.php';
 

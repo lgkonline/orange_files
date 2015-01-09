@@ -79,11 +79,11 @@ class Files extends Main {
     }
 
     private function generate_full_url() {
-        $this->full_url = $this->app_full_url .  $this->files_path . $this->basename;
+        $this->full_url = $this->files_path . $this->basename;
     }
 
     private function generate_full_path() {
-        $this->full_path = $this->app_full_path .  $this->files_path . $this->basename;
+        $this->full_path = $this->files_path . $this->basename;
     }
     
     private function generate_size($format = null) {
@@ -111,7 +111,7 @@ class Files extends Main {
         $this->size = $bytes;
     }
 
-        private function generate_thumbnail_path() {
+    private function generate_thumbnail_path() {
         $this->thumbnail_path = './thumbnails/' . $this->filename . '.jpg';
     }
     
@@ -140,6 +140,6 @@ class Files extends Main {
             imagejpeg($tmp_img, $this->app_full_path . $this->thumbnail_path);
         }
         
-        $this->thumbnail = $this->app_full_url . $this->thumbnail_path;
+        $this->thumbnail = $this->thumbnail_path;
     }
 }
