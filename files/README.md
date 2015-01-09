@@ -1,11 +1,10 @@
-orange_files
+Example
 ============
 
 <p>
-    Welcome. This is the repository for orange_files. A open source PHP file viewer.
+    Hello.
 </p>
 
 <p>
-    I am about to recode it completely. If you want to see the code of the older version you should check out the branch "v1.0"
-    or download the latest release.
+    This is just a placeholder.
 </p>
