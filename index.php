@@ -40,7 +40,7 @@ $main->authentication_password = '123456'; // Only works when $main->authenticat
 $opt_template = 'default';
 
 /* Theme */
-$opt_theme = 'paper';
+$opt_theme = 'default';
 
 
 /*

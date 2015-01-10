@@ -63,12 +63,19 @@ class Files extends Main {
     }
     
     private function is_image() {
-        if(getimagesize($this->full_path)){
+        if ($this->extension == 'png' || $this->extension == 'jpg' || $this->extension == 'jpeg' || $this->extension == 'gif') {
             return true;
-        } 
+        }
         else {
             return false;
-        }        
+        }
+        
+//        if(getimagesize($this->full_path)){
+//            return true;
+//        } 
+//        else {
+//            return false;
+//        }        
     }
 
         private function generate_fileinfo($file_string) {
@@ -121,7 +128,15 @@ class Files extends Main {
             $thumbWidth = 100;
 
             // Lade Bild
-            $img = imagecreatefrompng($this->full_path);
+            if ($this->extension == 'png') {
+                $img = imagecreatefrompng($this->full_path);
+            }
+            elseif ($this->extension == 'jpg' || $this->extension == 'jpeg') {
+                $img = imagecreatefromjpeg($this->full_path);
+            }
+            elseif ($this->extension == 'gif') {
+                $img = imagecreatefromgif($this->full_path);
+            }            
 
             $width = imagesx($img);
             $height = imagesy($img);
