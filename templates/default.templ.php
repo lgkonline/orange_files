@@ -9,8 +9,8 @@
         <?php endif; ?>
 
         <div class="col-sm-3 of-file">
-            <a href="<?php echo $file->full_url; ?>" class="btn btn-default" style="width: 100%;">
-                <span class="fa-stack fa-lg">
+            <a href="<?php echo $file->full_url; ?>" class="btn btn-default of-file-link of-tooltip" title="<?php echo $file->basename; ?>" style="width: 100%;">
+                <span class="fa-stack fa-lg of-file-extension-<?php echo $file->extension; ?>">
                     <?php if (isset($file->thumbnail)) : ?>
                     <img src="<?php echo $file->thumbnail; ?>" width="100%" height="100%">
                     <?php else : ?>

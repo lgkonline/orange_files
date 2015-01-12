@@ -25,8 +25,66 @@ THE SOFTWARE.
     Created on : 09.01.2015, 15:47:28
     Author     : lgk
 */
-.filetype-text {
-  font-size: .7em;
+.of-file .filetype-text {
+  font-size: .6em;
   font-weight: 700;
+}
+.of-file .of-file-extension-psd {
+  color: #34495e;
+}
+.of-file .of-file-extension-zip {
+  color: #f39c12;
+}
+.of-file .of-file-extension-rar {
+  color: #8e44ad;
+}
+.of-file .of-file-extension-html {
+  color: #e67e22;
+}
+.of-file .of-file-extension-css {
+  color: #27ae60;
+}
+.of-file .of-file-extension-less {
+  color: #2980b9;
+}
+.of-file .of-file-extension-js {
+  color: #f1c40f;
+}
+.of-file .of-file-extension-exe {
+  color: #e74c3c;
+}
+.of-file .of-file-extension-msi {
+  color: #1abc9c;
+}
+.of-file .of-file-extension-pdf {
+  color: #c0392b;
+}
+.of-file .of-file-extension-doc,
+.of-file .of-file-extension-docx {
+  color: #2980b9;
+}
+.of-file .of-file-extension-xls,
+.of-file .of-file-extension-xlsx {
+  color: #16a085;
+}
+.of-file .of-file-extension-avi,
+.of-file .of-file-extension-mp4 {
+  color: #c0392b;
+}
+.of-file .of-file-extension-mp3 {
+  color: #2ecc71;
+}
+.of-file .of-file-extension-jpg,
+.of-file .of-file-extension-jpeg,
+.of-file .of-file-extension-gif,
+.of-file .of-file-extension-png,
+.of-file .of-file-extension-bmp {
+  color: #3498db;
+}
+.of-file .of-file-link {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 }
 /*# sourceMappingURL=orange_files.css.map */
