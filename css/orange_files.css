@@ -26,55 +26,96 @@ THE SOFTWARE.
     Author     : lgk
 */
 /* Flat UI -- colorganize.com */
+@media (min-width: 768px) {
+  /* line 33, C:\xampp\htdocs\orange_files\less\orange_files.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000333}}
+  #of-login #of-login-panel {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* line 42, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000342}}
 .of-file .filetype-text {
   font-size: .6em;
   font-weight: 700;
 }
+/* line 47, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000347}}
 .of-file .of-file-extension-psd {
   color: #34495e;
 }
+/* line 50, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000350}}
 .of-file .of-file-extension-zip {
   color: #f39c12;
 }
+/* line 53, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000353}}
 .of-file .of-file-extension-rar {
   color: #8e44ad;
 }
+/* line 56, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000356}}
 .of-file .of-file-extension-html {
   color: #e67e22;
 }
+/* line 59, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000359}}
 .of-file .of-file-extension-css {
   color: #27ae60;
 }
+/* line 62, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000362}}
 .of-file .of-file-extension-less {
   color: #2980b9;
 }
+/* line 65, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000365}}
 .of-file .of-file-extension-js {
   color: #f1c40f;
 }
+/* line 68, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000368}}
 .of-file .of-file-extension-exe {
   color: #e74c3c;
 }
+/* line 71, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000371}}
 .of-file .of-file-extension-msi {
   color: #1abc9c;
 }
+/* line 74, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000374}}
 .of-file .of-file-extension-pdf {
   color: #c0392b;
 }
+/* line 77, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000377}}
 .of-file .of-file-extension-doc,
 .of-file .of-file-extension-docx {
   color: #2980b9;
 }
+/* line 81, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000381}}
 .of-file .of-file-extension-xls,
 .of-file .of-file-extension-xlsx {
   color: #16a085;
 }
+/* line 85, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000385}}
 .of-file .of-file-extension-avi,
 .of-file .of-file-extension-mp4 {
   color: #c0392b;
 }
+/* line 89, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000389}}
 .of-file .of-file-extension-mp3 {
   color: #2ecc71;
 }
+/* line 92, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\0000392}}
 .of-file .of-file-extension-jpg,
 .of-file .of-file-extension-jpeg,
 .of-file .of-file-extension-gif,
@@ -82,10 +123,11 @@ THE SOFTWARE.
 .of-file .of-file-extension-bmp {
   color: #3498db;
 }
+/* line 100, C:\xampp\htdocs\orange_files\less\orange_files.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/orange_files\/less\/orange_files\.less}line{font-family:\00003100}}
 .of-file .of-file-link {
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: left;
 }
-/*# sourceMappingURL=orange_files.css.map */

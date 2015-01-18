@@ -40,7 +40,7 @@ $main->authentication_password = '123456'; // Only works when $main->authenticat
 $opt_template = 'default';
 
 /* Theme */
-$opt_theme = 'default';
+$opt_theme = 'paper';
 
 
 /*
@@ -70,5 +70,9 @@ $opt_theme = 'default';
 $view = new View($opt_theme, $opt_template);
 $view->load_theme();
 $theme = new Theme();
-include './views/files.view.php';
-
+if ($main->authentication == 'password') {
+    include './views/login.view.php';
+}
+else {
+    include './views/files.view.php';
+}
