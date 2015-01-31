@@ -43,12 +43,6 @@
         <?php echo $theme->body; ?>
         
         <div class="container">
-            <a 
-                href="<?php if ($debug) : ?>./?<?php else : ?>./?debug=true<?php endif; ?>" 
-                class="btn btn-default <?php if ($debug) : ?>active<?php endif; ?> pull-right"
-            >
-                Debug
-            </a>
             
             <div class="page-header">
                 <h1><?php echo $main->app_title; ?></h1>
@@ -63,15 +57,27 @@
                     </div>
 
                     <div class="panel-body">
-                        <form class="form">
+                        <form class="form" action="./?action=login" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Password">
+                                <input type="text" class="form-control" placeholder="Password" name="password">
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-log-in"></span>
+                                    Sign in
+                                </button>
                             </div>
-                        </form>                    
+                        </form>    
+                        
+                        <?php if (filter_input(INPUT_GET, 'password') == 'false') : ?>
+                        <div class="alert alert-danger">
+                            <p>
+                                <span class="glyphicon glyphicon-exclamation-sign""></span> 
+                                The entered password is not correct.
+                            </p>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

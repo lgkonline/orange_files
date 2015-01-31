@@ -47,6 +47,16 @@ class Main {
         $this->authentication_password = '123456';
     }
     
+    public function init() {
+        session_start();
+        
+        $action = filter_input(INPUT_GET, 'action');
+        if ($action) {
+            $this->action($action);
+        }        
+    }
+
+
     // Liest Dateien aus dem gegebenen Ordner aus und gibt diese zurück
     public function load_files() {
         $output = array();
@@ -58,10 +68,31 @@ class Main {
                 array_push($output, $file);
             }
         }
+        
         return $output;
     }
     
     public function server_info($var) {
         return filter_input(INPUT_SERVER, $var);
+    }
+    
+    public function action($action) {
+        if ($action == 'login') {
+            $password = filter_input(INPUT_POST, 'password');
+            
+            if ($password == $this->authentication_password) {
+                $_SESSION['logged_in'] = true;
+                header('Location: ./');
+            }
+            else {
+                $_SESSION['logged_in'] = false;
+                header('Location: ./?password=false');
+            }
+        }
+        
+        if ($action == 'logout') {
+            $_SESSION['logged_in'] = false;
+            header('Location: ./');            
+        }
     }
 }

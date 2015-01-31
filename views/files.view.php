@@ -43,12 +43,19 @@
         <?php echo $theme->body; ?>
         
         <div class="container">
-            <a 
+<!--            <a 
                 href="<?php if ($debug) : ?>./?<?php else : ?>./?debug=true<?php endif; ?>" 
                 class="btn btn-default <?php if ($debug) : ?>active<?php endif; ?> pull-right"
             >
                 Debug
+            </a>-->
+            
+            <?php if ($main->authentication == 'password') : ?>
+            <a href="./?action=logout" class="btn btn-danger pull-right">
+                <span class="glyphicon glyphicon-log-out"></span>
+                Sign out
             </a>
+            <?php endif; ?>
             
             <div class="page-header">
                 <h1><?php echo $main->app_title; ?></h1>

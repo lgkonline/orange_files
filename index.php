@@ -16,6 +16,7 @@ require_once './classes/Files.class.php';
 //
 
 $main = new Main();
+$main->init();
 
 /* ----------------------*/
 
@@ -33,7 +34,7 @@ $main->files_path = './files/';
 
 
 /* Authentication ('none'|'password') */
-$main->authentication = 'none';
+$main->authentication = 'password';
 $main->authentication_password = '123456'; // Only works when $main->authentication = 'password'
 
 /* Template */
@@ -70,7 +71,7 @@ $opt_theme = 'paper';
 $view = new View($opt_theme, $opt_template);
 $view->load_theme();
 $theme = new Theme();
-if ($main->authentication == 'password') {
+if ($main->authentication == 'password' && !$_SESSION['logged_in']) {
     include './views/login.view.php';
 }
 else {
