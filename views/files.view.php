@@ -42,6 +42,39 @@
     <body>
         <?php echo $theme->body; ?>
         
+        <div class="navbar navbar-default">
+            <div class="container">
+                <?php if ($main->template_switcher == true) : ?>
+                <ul class="nav navbar-nav">
+                    <?php $templates = $view->get_templates(); 
+                    foreach ($templates as $template) : ?>
+                    <li <?php if ($template['is_default']) { echo 'class="active"'; } ?>>
+                        <a href="#template_<?php echo $template['template']; ?>"
+                           aria-controls="template_<?php echo $template['template']; ?>"
+                           data-toggle="tab"
+                           >
+                            <?php echo $template['template']; ?>
+                        </a>                        
+                    </li>                    
+                    <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>                
+                
+                <ul class="nav navbar-nav navbar-right">
+                <?php if ($main->authentication == 'password') : ?>
+                    <li>
+                        <a href="./?action=logout">
+                            <span class="glyphicon glyphicon-log-out"></span>
+                            Sign out
+                        </a>
+                    </li>
+                <?php endif; ?>                    
+                </ul>
+            </div>
+        </div>
+        
+        <?php $view->get_templates($opt_template); ?>
+        
         <div class="container">
 <!--            <a 
                 href="<?php if ($debug) : ?>./?<?php else : ?>./?debug=true<?php endif; ?>" 
@@ -50,21 +83,26 @@
                 Debug
             </a>-->
             
-            <?php if ($main->authentication == 'password') : ?>
-            <a href="./?action=logout" class="btn btn-danger pull-right">
-                <span class="glyphicon glyphicon-log-out"></span>
-                Sign out
-            </a>
-            <?php endif; ?>
-            
             <div class="page-header">
                 <h1><?php echo $main->app_title; ?></h1>
             </div>
         </div>
         
-        <?php 
+        <?php if ($main->template_switcher == true) : ?>
+        <div class="tab-content">
+            <?php foreach ($templates as $template) : ?>
+            <div 
+                class="tab-pane <?php if ($template['is_default']) { echo 'active'; } ?>"
+                id="template_<?php echo $template['template']; ?>"
+                >
+                <?php include './templates/' . $template['template_file'];  ?>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <?php else :
             // Hier kommt die Einbindung des Layouts/Templates
             include './templates/' . $view->template . '.templ.php'; 
+        endif;
         ?>
         
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>

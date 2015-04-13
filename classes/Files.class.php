@@ -68,17 +68,10 @@ class Files extends Main {
         }
         else {
             return false;
-        }
-        
-//        if(getimagesize($this->full_path)){
-//            return true;
-//        } 
-//        else {
-//            return false;
-//        }        
+        }     
     }
 
-        private function generate_fileinfo($file_string) {
+    private function generate_fileinfo($file_string) {
         $fileinfo = pathinfo($file_string);
         $this->basename = $fileinfo['basename'];
         $this->filename = $fileinfo['filename'];

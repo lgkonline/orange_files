@@ -40,6 +40,10 @@
     </head>
 
     <body>
+        <div class="navbar navbar-default">
+            
+        </div>
+        
         <?php echo $theme->body; ?>
         
         <div class="container">

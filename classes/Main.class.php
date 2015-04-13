@@ -36,12 +36,14 @@ class Main {
     public $files_path;
     public $authentication;
     public $authentication_password;
+    public $template_switcher;
     
     public function __construct() {
         $this->app_full_url = './';
         $this->app_full_path = './';
         $this->app_title = 'My files';
         $this->files_path = './files/';
+        $this->template_switcher = false;
         
         $this->authentication = 'none';
         $this->authentication_password = '123456';

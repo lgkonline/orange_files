@@ -27,7 +27,7 @@ $main->init();
  */
 
 /* Title */
-$main->app_title = 'My files';
+$main->app_title = 'Meine Dateien';
 
 /* Files path */
 $main->files_path = './files/';
@@ -38,10 +38,11 @@ $main->authentication = 'password';
 $main->authentication_password = '123456'; // Only works when $main->authentication = 'password'
 
 /* Template */
+$main->template_switcher = true;
 $opt_template = 'default';
 
 /* Theme */
-$opt_theme = 'paper';
+$opt_theme = 'yeti';
 
 
 /*

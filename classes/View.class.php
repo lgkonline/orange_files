@@ -50,4 +50,31 @@ class View extends Main {
     public function load_theme() {
         include $this->theme_path;
     }
+    
+    public function get_templates() {
+        $output = array();
+        $handle = scandir('./templates/');
+        
+        foreach ($handle as $file) {
+            // Verweise auf Überordner/aktuellen Ordner werden aussortiert
+            if (!($file == '.' || $file == '..') && strpos($file,'.templ.php') !== false) {
+                if ($file == $this->template . '.templ.php') {
+                    $is_default = true;
+                }
+                else {
+                    $is_default = false;
+                }
+                
+                $file_dots = explode('.', $file);
+                
+                $file_to_input = array();
+                $file_to_input['template'] = ucwords($file_dots[0]);
+                $file_to_input['template_file'] = $file;
+                $file_to_input['is_default'] = $is_default;
+                
+                array_push($output, $file_to_input);
+            }
+        }   
+        return $output;
+    }
 }
