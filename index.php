@@ -34,7 +34,7 @@ $main->files_path = './files/';
 
 
 /* Authentication ('none'|'password') */
-$main->authentication = 'password';
+$main->authentication = 'none';
 $main->authentication_password = '123456'; // Only works when $main->authentication = 'password'
 
 /* Template */
@@ -72,7 +72,7 @@ $opt_theme = 'yeti';
 $view = new View($opt_theme, $opt_template);
 $view->load_theme();
 $theme = new Theme();
-if ($main->authentication == 'password' && !$_SESSION['logged_in']) {
+if ($main->authentication == 'password' && isset($_SESSION['logged_in']) && !$_SESSION['logged_in']) {
     include './views/login.view.php';
 }
 else {
