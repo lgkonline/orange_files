@@ -39,7 +39,7 @@ $main->authentication_password = '123456'; // Only works when $main->authenticat
 
 /* Template */
 $main->template_switcher = true;
-$opt_template = 'default';
+$opt_template = 'video';
 
 /* Theme */
 $opt_theme = 'yeti';
